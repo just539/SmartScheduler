@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Scheduler</title>
+    <link rel="stylesheet" href="ent.css">
+</head>
+<body>
+    <header>
+        <h1 id="logo">Smart Scheduler</h1>
+    </header>
+
+    <main>
+        <!-- To-Do List Section -->
+        <section id="todo-section">
+            <h2>To-Do List with Reminder</h2>
+            <input type="text" id="task-input" placeholder="Add a new task">
+            <input type="datetime-local" id="task-time" placeholder="Set reminder time">
+            <button class="button" onclick="addTask()">Add Task</button>
+            <div id="todo-list"></div>
+        </section>
+
+        <!-- Journal Section -->
+        <section id="journal-section">
+            <h2>Daily Journal</h2>
+            <textarea id="journal-input" rows="4" placeholder="Write your daily journal entry..."></textarea>
+            <button class="button" onclick="saveJournal()">Save Entry</button>
+            <div id="journal-entries"></div>
+        </section>
+
+        <!-- Inspirational Quotes Section -->
+        <section id="quotes-section">
+            <h2>Inspirational Quote</h2>
+            <div id="quote">"Stay positive and work hard."</div>
+            <img id="quote-image" src="quote.jpg" alt="Inspiration" width="100%">
+            <button class="button" onclick="newQuote()">New Quote</button>
+        </section>
+
+        <!-- Voice-to-Do Converter Section -->
+        <section id="voice-section">
+            <h2>Voice to Task Converter</h2>
+            <button class="button" onclick="startVoiceTask()">Add Task by Voice</button>
+            <div id="voice-task-output">Speak your task...</div>
+        </section>
+
+        <!-- Location Reminder Section -->
+        <section id="location-section">
+            <h2>Location-Based Reminder</h2>
+            <button class="button" onclick="setLocation()">Set Home Location</button>
+            <div id="location-output">Current location reminders will show here.</div>
+        </section>
+
+        <!-- Focus Mode Songs Section -->
+        <section id="focus-section">
+            <h2>Focus Mode Songs</h2>
+            <button class="button" onclick="playFocusSong()">Play Focus Song</button>
+            <audio id="focus-audio" controls>
+                <source src="focus-song.mp3" type="audio/mp3">
+            </audio>
+        </section>
+
+        <!-- Mood-Based Suggestions Section -->
+        <section id="mood-section">
+            <h2>Mood-Based Task Suggestions</h2>
+            <button class="button" onclick="suggestTask()">Get Task Suggestion</button>
+            <div id="mood-task-output">Task suggestions based on mood will show here.</div>
+        </section>
+
+        <!-- Rewards Section -->
+        <section id="rewards-section">
+            <h2>Rewards</h2>
+            <div id="rewards-output">Complete tasks to earn rewards!</div>
+        </section>
+    </main>
+
+    <script src="ent.js"></script>
+</body>
+</html>
